@@ -3,14 +3,14 @@ import Product from '../model/product.js';
 // Create a new product
 export const createProduct = async (req, res) => {
   try {
-    const { name, price } = req.body;
+    const { name, price,quantity } = req.body;
     const image = req.file?.filename;
 
     if (!name || !price || !image) {
-      return res.status(400).json({ message: 'Name, price, and image are required' });
+      return res.status(400).json({ message: 'Name, price,quantity and image are required' });
     }
 
-    const newProduct = new Product({ name, price, image });
+    const newProduct = new Product({ name, price,quantity, image });
     await newProduct.save();
     res.status(201).json({ message: 'Product created', product: newProduct });
   } catch (err) {

@@ -1,0 +1,4 @@
+node_modules
+package-lock.json
+.env 
+#  The  .env  file is used to store environment variables.

@@ -5,7 +5,7 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-// REGISTER USER (NO AUTH)
+
 export async function postUsers(req, res) {
   try {
     const { email, firstname, lastname, password, wPhone } = req.body;
@@ -36,7 +36,6 @@ export async function postUsers(req, res) {
   }
 }
 
-// LOGIN USER (NO AUTH REQUIRED)
 export async function loginUser(req, res) {
   try {
     const { email, password } = req.body;

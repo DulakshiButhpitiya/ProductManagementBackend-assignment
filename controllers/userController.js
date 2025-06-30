@@ -4,7 +4,7 @@
 import User from "../model/user.js";
 import jwt from "jsonwebtoken"; // Not used for this assignment (no auth required)
 import bcrypt from "bcrypt"; // Optional since auth is not required, but kept for best practice
-import dotenv from "dotenv";
+import dotenv from "dotenv";   
 
 dotenv.config();
 
